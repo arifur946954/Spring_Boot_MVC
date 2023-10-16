@@ -6,11 +6,22 @@
     <link rel="stylesheet" th:href="@{/css/Demo.css}"/>
 </head>
 <body>
-<form th:action="@{/processForm}" method="GET">
+<form th:action="@{/processFormVeThree}" method="GET">
+    Name is:
     <input type="text" name="studentName"
     placeholder="submit student name"
     />
-
+    <br>
+    Email is:
+    <input type="email" name="studentEmail"
+           placeholder="submit student Email"
+    />
+    <br>
+    Mobile is:
+    <input type="number" name="studentMobile"
+           placeholder="submit student Mobile"
+    />
+<br>
     <input type="submit"/>
 
 </form>
