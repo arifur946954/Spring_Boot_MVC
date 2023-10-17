@@ -4,6 +4,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private  String email;
+    private String country;
 
     public Student() {
     }
@@ -12,7 +13,10 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+
     }
+
+
 
     public String getFirstName() {
         return firstName;
@@ -38,6 +42,13 @@ public class Student {
         this.email = email;
     }
 
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 
     @Override
     public String toString() {
@@ -45,6 +56,7 @@ public class Student {
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
+                ", country='" + country + '\'' +
                 '}';
     }
 }
