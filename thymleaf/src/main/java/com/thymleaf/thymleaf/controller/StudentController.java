@@ -14,14 +14,22 @@ import java.util.List;
 public class StudentController {
     @Value("${countries}")
     private List<String> countries;
+    @Value("${languages}")
+    private List<String> languages;
+
+    @Value("${operationgsystem}")
+    private List<String> operationgsystem;
     //
     @GetMapping("/showStudentForm")
     public  String showForm(Model theModel){
         //create a student object
         Student theStudent=new Student();
         //add student obj in the model
-        theModel.addAttribute("student" ,theStudent);
+        theModel.addAttribute("student",theStudent);
         theModel.addAttribute("countries",countries);
+        theModel.addAttribute("languages",languages);
+        theModel.addAttribute("operationgsystem",operationgsystem);
+
         return "student-form";
 
     }
